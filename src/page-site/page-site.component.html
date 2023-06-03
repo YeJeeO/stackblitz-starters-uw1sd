@@ -1,0 +1,33 @@
+<span class="container">
+  <h1>Welcome to {{ name }}!</h1>
+  <header>
+    <nav class="nav">
+      <a
+        target="info"
+        href="https://vk.com/kimtime"
+        title="Information about {{ name }}"
+      >
+        Our Group in VK
+      </a>
+    </nav>
+  </header>
+  <div>
+    <img src="{{ itemImageUrl }}" />
+    <h3>{{ span }}</h3>
+  </div>
+  <br />
+  <section class="style">
+    <h2>Our Dance Style</h2>
+    <ul>
+              <li *ngFor="let item of items; let i = index">{{ item }}</li>
+          </ul>
+    </section>
+  <section class="address">
+  <button (click)="toggle()">Address</button><br />
+  <p [hidden]="condition">{{ P }}</p>
+</section>
+</span>
+
+<br />
+<footer>{{ today | date }}</footer>
+<br />
